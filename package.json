@@ -1,0 +1,35 @@
+{
+  "name": "server-status",
+  "version": "1.0.0",
+  "description": "TODO",
+  "type": "module",
+  "main": "dist/extension.js",
+  "private": true,
+  "scripts": {
+    "prebuild": "rm -rf dist",
+    "build": "node esbuild.js",
+    "postbuild": "gnome-extensions install --force loginmanx@gmail.com.zip",
+    "validate": "tsc --noEmit",
+    "format": "prettier . --write"
+  },
+  "author": "LWJerri (lwjerri.dev)",
+  "license": "MIT",
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "dependencies": {
+    "@girs/gjs": "4.0.0-beta.25",
+    "@girs/gnome-shell": "48.0.2",
+    "@girs/gobject-2.0": "2.84.2-4.0.0-beta.25",
+    "@girs/st-16": "16.0.0-4.0.0-beta.25"
+  },
+  "devDependencies": {
+    "@tsconfig/strictest": "2.0.5",
+    "adm-zip": "0.5.16",
+    "esbuild": "0.25.8",
+    "prettier": "3.6.2",
+    "typescript": "5.8.3"
+  }
+}

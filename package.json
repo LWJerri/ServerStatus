@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@tsconfig/strictest": "2.0.5",
-    "adm-zip": "0.5.16",
+    "adm-zip": "0.6.0",
     "esbuild": "0.25.8",
     "prettier": "3.6.2",
     "typescript": "5.8.3"
